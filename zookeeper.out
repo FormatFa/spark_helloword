@@ -1,0 +1,93 @@
+2019-06-02 11:12:42,873 [myid:] - INFO  [main:QuorumPeerConfig@101] - Reading configuration from: /usr/local/src/zookeeper-3.4.5/bin/../conf/zoo.cfg
+2019-06-02 11:12:42,877 [myid:] - INFO  [main:QuorumPeerConfig@334] - Defaulting to majority quorums
+2019-06-02 11:12:42,890 [myid:2] - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2019-06-02 11:12:42,890 [myid:2] - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2019-06-02 11:12:42,891 [myid:2] - INFO  [main:DatadirCleanupManager@101] - Purge task is not scheduled.
+2019-06-02 11:12:42,899 [myid:2] - INFO  [main:QuorumPeerMain@127] - Starting quorum peer
+2019-06-02 11:12:42,917 [myid:2] - INFO  [main:NIOServerCnxnFactory@94] - binding to port 0.0.0.0/0.0.0.0:2181
+2019-06-02 11:12:42,932 [myid:2] - INFO  [main:QuorumPeer@913] - tickTime set to 2000
+2019-06-02 11:12:42,932 [myid:2] - INFO  [main:QuorumPeer@933] - minSessionTimeout set to -1
+2019-06-02 11:12:42,932 [myid:2] - INFO  [main:QuorumPeer@944] - maxSessionTimeout set to -1
+2019-06-02 11:12:42,932 [myid:2] - INFO  [main:QuorumPeer@959] - initLimit set to 10
+2019-06-02 11:12:43,101 [myid:2] - INFO  [main:FileSnap@83] - Reading snapshot /usr/local/hadoop/tmp/zookeeper/version-2/snapshot.1b000000f4
+2019-06-02 11:12:43,195 [myid:2] - INFO  [Thread-1:QuorumCnxManager$Listener@486] - My election bind port: 0.0.0.0/0.0.0.0:3888
+2019-06-02 11:12:43,201 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:QuorumPeer@670] - LOOKING
+2019-06-02 11:12:43,203 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:FastLeaderElection@740] - New election. My id =  2, proposed zxid=0x1c000000ca
+2019-06-02 11:12:43,216 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@542] - Notification: 2 (n.leader), 0x1c000000ca (n.zxid), 0x1 (n.round), LOOKING (n.state), 2 (n.sid), 0x1c (n.peerEPoch), LOOKING (my state)
+2019-06-02 11:12:43,221 [myid:2] - WARN  [WorkerSender[myid=2]:QuorumCnxManager@368] - Cannot open channel to 3 at election address slave2/192.168.3.122:3888
+java.net.ConnectException: 拒绝连接 (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.connectOne(QuorumCnxManager.java:354)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.toSend(QuorumCnxManager.java:327)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.process(FastLeaderElection.java:393)
+	at org.apache.zookeeper.server.quorum.FastLeaderElection$Messenger$WorkerSender.run(FastLeaderElection.java:365)
+	at java.lang.Thread.run(Thread.java:748)
+2019-06-02 11:12:43,223 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@542] - Notification: 1 (n.leader), 0x1c000000ca (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x1c (n.peerEPoch), LOOKING (my state)
+2019-06-02 11:12:43,223 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@542] - Notification: 2 (n.leader), 0x1c000000ca (n.zxid), 0x1 (n.round), LOOKING (n.state), 1 (n.sid), 0x1c (n.peerEPoch), LOOKING (my state)
+2019-06-02 11:12:43,425 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:QuorumPeer@750] - LEADING
+2019-06-02 11:12:43,437 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Leader@58] - TCP NoDelay set to: true
+2019-06-02 11:12:43,495 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:zookeeper.version=3.4.5-1392090, built on 09/30/2012 17:52 GMT
+2019-06-02 11:12:43,495 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:host.name=slave1
+2019-06-02 11:12:43,496 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.version=1.8.0_191
+2019-06-02 11:12:43,496 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.vendor=Oracle Corporation
+2019-06-02 11:12:43,496 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.home=/usr/local/src/jdk1.8.0_191/jre
+2019-06-02 11:12:43,497 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.class.path=/usr/local/src/zookeeper-3.4.5/bin/../build/classes:/usr/local/src/zookeeper-3.4.5/bin/../build/lib/*.jar:/usr/local/src/zookeeper-3.4.5/bin/../lib/slf4j-log4j12-1.6.1.jar:/usr/local/src/zookeeper-3.4.5/bin/../lib/slf4j-api-1.6.1.jar:/usr/local/src/zookeeper-3.4.5/bin/../lib/netty-3.2.2.Final.jar:/usr/local/src/zookeeper-3.4.5/bin/../lib/log4j-1.2.15.jar:/usr/local/src/zookeeper-3.4.5/bin/../lib/jline-0.9.94.jar:/usr/local/src/zookeeper-3.4.5/bin/../zookeeper-3.4.5.jar:/usr/local/src/zookeeper-3.4.5/bin/../src/java/lib/*.jar:/usr/local/src/zookeeper-3.4.5/bin/../conf:
+2019-06-02 11:12:43,497 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2019-06-02 11:12:43,497 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.io.tmpdir=/tmp
+2019-06-02 11:12:43,498 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.compiler=<NA>
+2019-06-02 11:12:43,498 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:os.name=Linux
+2019-06-02 11:12:43,498 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:os.arch=amd64
+2019-06-02 11:12:43,498 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:os.version=3.10.0-957.el7.x86_64
+2019-06-02 11:12:43,499 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:user.name=root
+2019-06-02 11:12:43,500 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:user.home=/root
+2019-06-02 11:12:43,501 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:user.dir=/root
+2019-06-02 11:12:43,503 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:ZooKeeperServer@162] - Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir /usr/local/hadoop/tmp/zookeeper/version-2 snapdir /usr/local/hadoop/tmp/zookeeper/version-2
+2019-06-02 11:12:43,505 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Leader@345] - LEADING - LEADER ELECTION TOOK - 303
+2019-06-02 11:12:43,517 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:FileSnap@83] - Reading snapshot /usr/local/hadoop/tmp/zookeeper/version-2/snapshot.1b000000f4
+2019-06-02 11:12:43,549 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:FileTxnSnapLog@240] - Snapshotting: 0x1c000000ca to /usr/local/hadoop/tmp/zookeeper/version-2/snapshot.1c000000ca
+2019-06-02 11:12:43,572 [myid:2] - INFO  [LearnerHandler-/192.168.3.120:34718:LearnerHandler@263] - Follower sid: 1 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@32e2d8dd
+2019-06-02 11:12:43,611 [myid:2] - INFO  [LearnerHandler-/192.168.3.120:34718:LearnerHandler@318] - Synchronizing with Follower sid: 1 maxCommittedLog=0x1c000000ca minCommittedLog=0x1c00000001 peerLastZxid=0x1c000000ca
+2019-06-02 11:12:43,611 [myid:2] - INFO  [LearnerHandler-/192.168.3.120:34718:LearnerHandler@395] - Sending DIFF
+2019-06-02 11:12:43,639 [myid:2] - WARN  [LearnerHandler-/192.168.3.120:34718:Leader@574] - Commiting zxid 0x1d00000000 from /192.168.3.121:2888 not first!
+2019-06-02 11:12:43,640 [myid:2] - WARN  [LearnerHandler-/192.168.3.120:34718:Leader@576] - First is 0x0
+2019-06-02 11:12:43,640 [myid:2] - INFO  [LearnerHandler-/192.168.3.120:34718:Leader@598] - Have quorum of supporters; starting up and setting last processed zxid: 0x1d00000000
+2019-06-02 11:13:08,649 [myid:2] - INFO  [slave1/192.168.3.121:3888:QuorumCnxManager$Listener@493] - Received connection request /192.168.3.122:37450
+2019-06-02 11:13:08,667 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@542] - Notification: 3 (n.leader), 0x1c000000ca (n.zxid), 0x1 (n.round), LOOKING (n.state), 3 (n.sid), 0x1c (n.peerEPoch), LEADING (my state)
+2019-06-02 11:13:08,693 [myid:2] - INFO  [LearnerHandler-/192.168.3.122:34748:LearnerHandler@263] - Follower sid: 3 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@4e9fffe9
+2019-06-02 11:13:08,823 [myid:2] - INFO  [LearnerHandler-/192.168.3.122:34748:LearnerHandler@318] - Synchronizing with Follower sid: 3 maxCommittedLog=0x1c000000ca minCommittedLog=0x1c00000001 peerLastZxid=0x1c000000ca
+2019-06-02 11:13:08,823 [myid:2] - INFO  [LearnerHandler-/192.168.3.122:34748:LearnerHandler@395] - Sending DIFF
+2019-06-02 11:13:24,001 [myid:2] - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x26b066076090003, timeout of 40000ms exceeded
+2019-06-02 11:13:24,001 [myid:2] - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x36b0660bfbb0000, timeout of 40000ms exceeded
+2019-06-02 11:13:24,002 [myid:2] - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x16b0660507a0001, timeout of 40000ms exceeded
+2019-06-02 11:13:24,002 [myid:2] - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x36b0660bfbb0009, timeout of 40000ms exceeded
+2019-06-02 11:13:24,002 [myid:2] - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x26b066076090004, timeout of 40000ms exceeded
+2019-06-02 11:13:24,002 [myid:2] - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x36b0660bfbb000a, timeout of 40000ms exceeded
+2019-06-02 11:13:24,002 [myid:2] - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x36b0660bfbb0001, timeout of 40000ms exceeded
+2019-06-02 11:13:24,002 [myid:2] - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x36b0660bfbb0002, timeout of 40000ms exceeded
+2019-06-02 11:13:24,002 [myid:2] - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x26b066076090002, timeout of 40000ms exceeded
+2019-06-02 11:13:24,002 [myid:2] - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x36b0660bfbb0004, timeout of 40000ms exceeded
+2019-06-02 11:13:24,004 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x26b066076090003
+2019-06-02 11:13:24,005 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x36b0660bfbb0000
+2019-06-02 11:13:24,005 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x16b0660507a0001
+2019-06-02 11:13:24,005 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x36b0660bfbb0009
+2019-06-02 11:13:24,005 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x26b066076090004
+2019-06-02 11:13:24,011 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x36b0660bfbb000a
+2019-06-02 11:13:24,012 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x36b0660bfbb0001
+2019-06-02 11:13:24,012 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x36b0660bfbb0002
+2019-06-02 11:13:24,014 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x26b066076090002
+2019-06-02 11:13:24,014 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x36b0660bfbb0004
+2019-06-02 11:13:24,010 [myid:2] - INFO  [SyncThread:2:FileTxnLog@199] - Creating new log file: log.1d00000001
+2019-06-02 11:15:55,499 [myid:2] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /192.168.3.121:36156
+2019-06-02 11:15:55,503 [myid:2] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /192.168.3.121:36156
+2019-06-02 11:15:55,524 [myid:2] - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x26b18bffc790000 with negotiated timeout 5000 for client /192.168.3.121:36156
+2019-06-02 11:15:55,956 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@627] - Got user-level KeeperException when processing sessionid:0x36b18c05bb60000 type:create cxid:0x2 zxid:0x1d0000000f txntype:-1 reqpath:n/a Error Path:/hadoop-ha/ns1/ActiveStandbyElectorLock Error:KeeperErrorCode = NodeExists for /hadoop-ha/ns1/ActiveStandbyElectorLock
+2019-06-02 11:16:16,057 [myid:2] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /192.168.3.120:49746
+2019-06-02 11:16:16,057 [myid:2] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /192.168.3.120:49746
+2019-06-02 11:16:16,082 [myid:2] - INFO  [CommitProcessor:2:ZooKeeperServer@595] - Established session 0x26b18bffc790001 with negotiated timeout 10000 for client /192.168.3.120:49746
+2019-06-02 11:16:16,122 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@627] - Got user-level KeeperException when processing sessionid:0x26b18bffc790001 type:create cxid:0x1 zxid:0x1d00000011 txntype:-1 reqpath:n/a Error Path:/yarn-leader-election Error:KeeperErrorCode = NodeExists for /yarn-leader-election
+2019-06-02 11:16:16,166 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@627] - Got user-level KeeperException when processing sessionid:0x26b18bffc790001 type:create cxid:0x2 zxid:0x1d00000012 txntype:-1 reqpath:n/a Error Path:/yarn-leader-election/yarn-ha Error:KeeperErrorCode = NodeExists for /yarn-leader-election/yarn-ha
