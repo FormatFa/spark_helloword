@@ -1,9 +1,9 @@
-#创建Spark工程
+# 创建Spark工程
 
 IDEA里创建Spark Scala 工程 和 简单测试
 
 ![测试图片](funny.png "测试")
-##1. 创建Maven Scala 工程
+## 1. 创建Maven Scala 工程
 
 选择Create from archetype
 
@@ -13,14 +13,14 @@ IDEA里创建Spark Scala 工程 和 简单测试
 
 ![创建Maven工程](step1_1.png)
 
-##2. 设置Scala SDK 
+## 2. 设置Scala SDK 
 需要先下载解压Scala SDK, 打开工程的Project Structure界面(*选中工程主目录,按F4*)
 在Global Libraries里选择添加Scala SDK
 ![添加Scala SDK](step1_2.png)
 ![添加后Scala SDK](step1_2_2.png)
 
 
-##3. 修改pom.xml,设置Scala版本 
+## 3. 修改pom.xml,设置Scala版本 
 
 找到  
 ```xml
@@ -36,7 +36,7 @@ IDEA里创建Spark Scala 工程 和 简单测试
      </properties>
 ```
 
-##4. 添加Spark依赖库支持
+## 4. 添加Spark依赖库支持
 2.11为对应的Scala版本(可以在仓库里搜索)
 ```xml
 <!--Spark RDD这些的依赖-->
@@ -69,7 +69,7 @@ IDEA里创建Spark Scala 工程 和 简单测试
 
 测试计算zookeeper启动日志文件 (zookeeper.out)文件里各种日志等级的数量
 
-##1. 上传文件到HDFS中
+## 1. 上传文件到HDFS中
 ```[root@slave1 ~]# hdfs dfs -mkdir /sparktest
     [root@slave1 ~]# ll
     总用量 52
@@ -82,7 +82,7 @@ IDEA里创建Spark Scala 工程 和 简单测试
  
 ```
 
-##2. 编写城市
+## 2. 编写城市
 
 新建Main 的Scala 类(代码先在Spark-shell里测试)
 ```scala
@@ -128,7 +128,7 @@ object Main
 }
 ```
 
-##3. 打包成jar 包
+## 3. 打包成jar 包
 
 F4 打开Project Structure 界面，选择Artifacts,新建一个jar包，将工程的compile output添加进去
 
@@ -138,7 +138,7 @@ F4 打开Project Structure 界面，选择Artifacts,新建一个jar包，将工�
 Build -> Build Artifacts 
 jar输出到 out/artifacts/ftest/ftest.jar
 
-##4. scp到集群测试
+## 4. scp到集群测试
 
 ```
 scp  out/artifacts/ftest/ftest.jar root@master:/root
